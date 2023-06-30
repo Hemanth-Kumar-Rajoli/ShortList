@@ -1,0 +1,19 @@
+{
+  "name": "shortlist-api",
+  "version": "1.0.0",
+  "description": "assement",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Hemanth Kumar Rajoli",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase": "^9.23.0",
+    "g": "^2.0.1",
+    "nodemon": "^2.0.22"
+  }
+}
