@@ -1,0 +1,4 @@
+<section>
+  <app-pannel [selected]="selectedPanel" (modifiedPannel)="onChangePannel($event)"></app-pannel>
+  <app-users [users]="users" [selectedPannel]="selectedPanel" (promoteUser)="userToWinner($event)"></app-users>
+</section>

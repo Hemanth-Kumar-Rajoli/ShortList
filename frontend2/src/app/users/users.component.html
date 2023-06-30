@@ -1,0 +1,47 @@
+<div class="available-users">
+    <!-- <table>
+        <tr>
+            <th>Name</th>
+            <th>age</th>
+            <th>score</th>
+            <th *ngIf="selectedPannel=='users'">action</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.score}}</td>
+            <td *ngIf="selectedPannel=='users'"><button (click)="onUserSelect(user)">Add to winners</button></td>
+        </tr>
+    </table> -->
+
+    <table mat-table [dataSource]="users" class="mat-elevation-z8">
+
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- age Column -->
+        <ng-container matColumnDef="age">
+          <th mat-header-cell *matHeaderCellDef> Age </th>
+          <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+        </ng-container>
+      
+        <!-- score Column -->
+        <ng-container matColumnDef="score">
+          <th mat-header-cell *matHeaderCellDef> Score </th>
+          <td mat-cell *matCellDef="let element"> {{element.score}} </td>
+        </ng-container>
+        <!-- action Column -->
+        <ng-container matColumnDef="action" *ngIf="selectedPannel=='users'">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let element"><button (click)="onUserSelect(element)">Add to winners</button></td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+            
+</div>
